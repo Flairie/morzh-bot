@@ -16,7 +16,7 @@ client.on('ready', () => {
 client.on('message', msg => { 
   sMsg = msg.content.split(" ");
   if(msg.content == "$$TEST"){
-    msg.reply("0.1");
+    msg.reply("0.2");
   }
   
   if(msg.content == "$$LAST" && MessageBase.length != 0) {
@@ -30,6 +30,8 @@ client.on('message', msg => {
     }
     LogoOut += "]";
     msg.reply(LogoOut);
+  } else if(msg.content == "$$LAST") {
+    msg.reply("err");
   }
   
   for(i = 0; i < sMsg.length; i++) {
@@ -42,7 +44,9 @@ client.on('message', msg => {
       
       if(ALGN == "0" && TEXT == "0" && TYPE == "0"){
         MessageBase.push("$$IS");
-      }
+      } 
+    } else {
+      MessageBase.push(sMsg[i]);
     }
   }
 });
