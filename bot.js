@@ -20,7 +20,7 @@ client.on('message', msg => {
   }
   
   if(msg.content == "$$LAST" && MessageBase.length != 0) {
-    LogoOut = "[";
+    var LogoOut = "[";
     LogoOut += MessageBase[0];
     LogoOut += " ";
     for(i=1;i<MessageBase.length();i++){
