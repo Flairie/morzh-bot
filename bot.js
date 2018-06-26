@@ -19,8 +19,8 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => { 
-  sMsg = msg.split();
-  if(msg == "$$TEST"){
+  sMsg = msg.content.split();
+  if(msg.content == "$$TEST"){
     msg.reply("Именнно");
   }
   
