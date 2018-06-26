@@ -29,13 +29,13 @@ client.on('message', msg => {
   for(i = 0; i < sMsg.length; i++) {
     if(sMsg[i] in TempMemr) {
       var INDEX = TempText.find(sMsg[i]);
-      var MEMR = TempMemr[INDEX]
-      var ALGN = TempAlgn[INDEX]
-      var TEXT = TempText[INDEX]
-      var TYPE = TempType[INDEX]
+      var MEMR = TempMemr[INDEX];
+      var ALGN = TempAlgn[INDEX];
+      var TEXT = TempText[INDEX];
+      var TYPE = TempType[INDEX];
       
       if(ALGN == '0' && TEXT == '0' && TYPE == 0){
-        
+        ;
       }
     }
   }
