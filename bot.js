@@ -6,6 +6,7 @@ var TempText = ["0"];
 var TempAlgn = ["0"];
 var TempType = ["0"];
 
+var MessageBase = [];
 
 client.on('ready', () => {
   //console.log(`Logged in as ${423868710940311552}!`);
@@ -18,7 +19,17 @@ client.on('message', msg => {
     msg.reply("Именнно");
   }
   
-  var MessageBase = [];
+  if(msg.content == "$$LAST" && MessageBase.length != 0) {
+    LogoOut = "[";
+    LogoOut += MessageBase[0];
+    LogoOut += " ";
+    for(i=1;i<MessageBase.length();i++){
+      LogoOut+=",";
+      LogoOut+=MessageBase[i];
+      LogoOut+= " ";
+    }
+    msg.reply(MessageBase
+  }
   
   for(i = 0; i < sMsg.length; i++) {
     if(sMsg[i] in TempMemr) {
@@ -29,7 +40,7 @@ client.on('message', msg => {
       var TYPE = TempType[INDEX];
       
       if(ALGN == "0" && TEXT == "0" && TYPE == "0"){
-        ;
+        MessageBase.push("$$IS");
       }
     }
   }
