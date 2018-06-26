@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const fs = require("fs");
 var TempMemr = ['это'];
 var TempText = ['0'];
-var TempAlgn = ['0']:
+var TempAlgn = ['0'];
 var TempType = ['0'];
 
 
