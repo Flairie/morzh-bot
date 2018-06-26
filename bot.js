@@ -1,10 +1,10 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
-var TempMemr = ['это'];
-var TempText = ['0'];
-var TempAlgn = ['0'];
-var TempType = ['0'];
+var TempMemr = ["это"];
+var TempText = ["0"];
+var TempAlgn = ["0"];
+var TempType = ["0"];
 
 
 client.on('ready', () => {
@@ -34,7 +34,7 @@ client.on('message', msg => {
       var TEXT = TempText[INDEX];
       var TYPE = TempType[INDEX];
       
-      if(ALGN == '0' && TEXT == '0' && TYPE == 0){
+      if(ALGN == "0" && TEXT == "0" && TYPE == "0"){
         ;
       }
     }
