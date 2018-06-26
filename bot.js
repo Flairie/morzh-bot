@@ -28,7 +28,8 @@ client.on('message', msg => {
       LogoOut+=MessageBase[i];
       LogoOut+= " ";
     }
-    msg.reply(MessageBase
+    LogoOut += "]";
+    msg.reply(LogoOut);
   }
   
   for(i = 0; i < sMsg.length; i++) {
