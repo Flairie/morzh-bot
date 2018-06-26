@@ -16,7 +16,7 @@ client.on('ready', () => {
 client.on('message', msg => { 
   sMsg = msg.content.split(" ");
   if(msg.content == "$$TEST"){
-    msg.reply("Именнно");
+    msg.reply("0.1");
   }
   
   if(msg.content == "$$LAST" && MessageBase.length != 0) {
