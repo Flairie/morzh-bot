@@ -9,13 +9,7 @@ var TempType = ["0"];
 
 client.on('ready', () => {
   //console.log(`Logged in as ${423868710940311552}!`);
-  let GreatJar = Math.floor(Math.random()*Games.length);
-  client.user.setPresence({ game: { name: Games[GreatJar] + Game }, status: 'dnd' });
   
-  setInterval(() => {
-    let GreatJar = Math.floor(Math.random()*Games.length);
-    client.user.setPresence({ game: { name: Games[GreatJar] + Game }});
-  }, 600000);
 });
 
 client.on('message', msg => { 
