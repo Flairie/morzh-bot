@@ -16,9 +16,9 @@ client.on('ready', () => {
 client.on('message', msg => { 
   sMsg = msg.content.split(" ");
   if(msg.content == "$$TEST"){
-    msg.reply("0.2");
+    msg.reply("0.3");
   }
-  
+   
   if(msg.content == "$$LAST" && MessageBase.length != 0) {
     var LogoOut = "[";
     LogoOut += MessageBase[0];
@@ -28,6 +28,8 @@ client.on('message', msg => {
       LogoOut+=MessageBase[i];
       LogoOut+= " ";
     }
+    
+    MessageBase = []
     LogoOut += "]";
     msg.reply(LogoOut);
   } else if(msg.content == "$$LAST") {
