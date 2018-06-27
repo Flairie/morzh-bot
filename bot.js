@@ -16,7 +16,7 @@ client.on('ready', () => {
 client.on('message', msg => { 
   sMsg = msg.content.split(" ");
   if(msg.content == "$$TEST"){
-    msg.reply("0.4");
+    msg.reply("0.5");
   }
    
   if(msg.content == "$$LAST" && MessageBase.length != 0) {
@@ -41,7 +41,7 @@ client.on('message', msg => {
   for(i = 0; i < sMsg.length; i++) {
     if(sMsg[i] in TempMemr) {
       var INDEX = TempMemr.find(sMsg[i]);
-      msg.send((i + "")+") "+(INDEX+""));
+      msg.channel.send((i + "")+") "+(INDEX+""));
       var MEMR = TempMemr[INDEX];
       var ALGN = TempAlgn[INDEX];
       var TEXT = TempText[INDEX];
