@@ -41,6 +41,7 @@ client.on('message', msg => {
   for(i = 0; i < sMsg.length; i++) {
     if(sMsg[i] in TempMemr) {
       var INDEX = TempMemr.find(sMsg[i]);
+      msg.send((i + "")+") "+(INDEX+"");
       var MEMR = TempMemr[INDEX];
       var ALGN = TempAlgn[INDEX];
       var TEXT = TempText[INDEX];
