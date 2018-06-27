@@ -29,12 +29,14 @@ client.on('message', msg => {
       LogoOut+= " ";
     }
     
-    MessageBase = []
+    
     LogoOut += "]";
     msg.reply(LogoOut);
   } else if(msg.content == "$$LAST") {
     msg.reply("err");
   }
+  
+  MessageBase = []
   
   for(i = 0; i < sMsg.length; i++) {
     if(sMsg[i] in TempMemr) {
